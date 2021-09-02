@@ -9,5 +9,11 @@ mongoose.connect(
     // //   useCreateIndex: true,
     //   useFindAndModify: false
     }
-  ).then(s => console.log(s)).catch(e => console.error(e));
+  ).then(s => 
+    {
+        let connection = s.connections[0];
+
+        console.log(connection);
+        //console.log(s)
+    }).catch(e => console.error(e));
   
